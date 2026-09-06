@@ -3,12 +3,38 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Inicio</title>
-        <script src="assets/js/script.js" defer></script>
+        <title>Connecta: Organize seus contatos e compromissos</title>
+        <script src="assets/js/script.js" defer></script> 
+        <!--* O style e a linguagem br é adicionado altomaticamente com o script acima -->
     </head>
     <body>
-        <header> <!-- cabeçalho -->
+        <header class="hero-section-header"> <!-- cabeçalho -->
+            <div class="hero-section-header-logo"><!--* Logo e slogan do connecta -->
+                <a href="index.html" class="logo" > 
+                    <img src="assets/imgs/logo/logo_connecta.png" alt="imagem inascessível" class="header-img"> 
+                    
+                    <span class="logo-text">
+                        <span class="logo-title">connecta</span>
+                        <span class="logo-subtitle">AGENDA DE CONTATOS</span>
+                    </span>
 
+                </a>
+                
+                <nav class="main-nav"> <!--* menu de navegação da pagina inicial -->
+
+                    <a href="index.html" class="nav-link active">Início</a>
+                    <a href="#" class="nav-link">Sobre</a>
+                    <a href="#" class="nav-link">Contato</a>
+
+                </nav>
+            </div>
+
+            <div class="header-actions">
+                <!--* botões de acesso, com login  -->
+                <button class="btn-login"><a href="login.html">Entrar</a></button>
+                <button class="btn-cadastro"><a href="cadastro.html">Criar Conta</a></button>
+                
+            </div>
         </header>
 
         <main> <!-- conteudo principal -->
