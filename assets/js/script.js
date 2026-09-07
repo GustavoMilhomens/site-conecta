@@ -6,7 +6,7 @@ document.documentElement.lang = "pt-BR";
 async function add_element() {
     const css = document.createElement('link'); //? cria uma variavel que recebe o elemento link
     css.rel = 'stylesheet'; //? configura 
-    css.href = 'style.css'; //? referencia o css
+    css.href = 'assets/css/style.css'; //? referencia o css
     document.head.append(css); //? adiciona o elemento
 };
 
