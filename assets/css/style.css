@@ -1,7 +1,29 @@
+:root{
+    /*? =========== paleta de cores =========== */
+    --bg-color-primary : #e2e2e2;
+    --bg-color-secundary : #E6D7C5;
+
+    --bg-button-primary : #00A793;
+    --bg-button-secundary : #424242;
+
+    --text-color-primary : #222222;
+    --text-color-secundary: #898989;
 
 
+  
+}
 
-/* :root{}
+body.darck_theme{
+    --bg-color-primary : #e2e2e2;
+    --bg-color-secundary : #E6D7C5;
+
+    --bg-button-primary : #00A793;
+    --bg-button-secundary : #424242;
+
+    --text-color-primary : #222222;
+    --text-color-secundary: #898989;
+}
+/* 
 header{}
 .hero-section-header{}
 .hero-section-header-logo{}
