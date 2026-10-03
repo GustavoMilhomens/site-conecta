@@ -11,8 +11,8 @@
     --bg-button-terceary : #e2e2e2;
 
     --text-color-primary : #222222;
-    --text-color-secundary: #a8a8a8;
-    --text-color-terceary: #225da6;
+    --text-color-secundary: #777777;
+    --text-color-terceary: #d2d2d2;
 
 
     --font-main : "Montserrat", sans-serif;
@@ -71,6 +71,9 @@ body{
     header{
         /*? estilização padrão do cabeçalho */
         width: 100%;
+        height: auto;
+        margin: 0 auto;
+        padding: 0 24px;
         background-color: var(--bg-color-primary);
         border-bottom: 1px solid var(--bg-color-terceary);
         position: sticky; /* fica fixo no topo da pagina  */
@@ -131,33 +134,59 @@ body{
 
                 .btn-login{
                     background-color: var(--bg-button-terceary);
-                    color: var(--text-color-secundary);
                     border: 2px solid var(--text-color-secundary);
-                    padding: 10px 20px;
+                    padding: 10px 0px;
                     border-radius: 10px;
-                    font-size: 14px;
-                    font-weight: 600;
                     cursor: pointer;
                     white-space: nowrap;
+
+                    a{
+                        color: var(--text-color-secundary);
+                        font-size: 14px;
+                        font-weight: 600;
+                        padding: 10px 22px;
+                    }
+                }
+
+                .btn-login:hover{
+                    transition: 105ms;
+                    background-color: none;
+                    /*! ajustar a interação */
                 }
                 
                 .btn-cadastro{
                     background-color: var(--bg-button-primary);
-                    color: var(--text-color-terceary);
                     border: none;
-                    padding: 10px 20px;
+                    padding: 11.6px 0px;
                     border-radius: 10px;
-                    font-size: 14px;
-                    font-weight: 600;
                     cursor: pointer;
                     white-space: nowrap;
+
+                    a{
+                        color: var(--text-color-terceary);
+                        font-size: 14px;
+                        font-weight: 600;
+                        padding: 11px 22px;
+                        
+                    }
                 } 
+
+                .btn-cadastro:hover{
+                    transition: 105ms;
+                    background-color: none;
+                    /*! ajustar a interação */
+                }
+
+
             }
 
+
         }
-        
+
 
     }
+
+
 }
 
 
