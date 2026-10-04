@@ -3,34 +3,58 @@
 :root{
     /** ============== paleta de cores ============== */
     --bg-color-primary : #e2e2e2;
-    --bg-color-secundary : #E6D7C5;
-    --bg-color-terceary : #4e4e4e;
+    --bg-color-secondary : #E6D7C5;
+    --bg-color-tertiary : #4e4e4e;
 
     --bg-button-primary : #00A793;
-    --bg-button-secundary : #424242;
-    --bg-button-terceary : #e2e2e2;
+    --bg-button-secondary : #424242;
+    --bg-button-tertiary : #e2e2e2;
 
     --text-color-primary : #222222;
-    --text-color-secundary: #777777;
-    --text-color-terceary: #d2d2d2;
+    --text-color-secondary: #777777;
+    --text-color-tertiary: #d2d2d2;
 
+    /** ============== coloração da logo ==============*/
+    --logo-agenda: #263647 ;  /* corpo da agenda */
+    --logo-lombada: #1b2a3a ;  /* linha da lombada */
+    --logo-abas: #d6d4cd ;  /* abas laterais */  
+    --logo-pessoa: #d9d5cc ;  /* ícone de pessoa */
+    --logo-nome: #1c2b3d ;  /* "connecta" */  
+    --logo-linha: #767a7f ;  /* traço do slogan */
+    --logo-slogan: #767a7f ; /* "AGENDA DE CONTATOS" */ 
 
+    /** ============== fonte ==============*/
     --font-main : "Montserrat", sans-serif;
+
+    --opacity-hover : 0.7;
+
+    --transition-time : 0.2s;
+
+    
 }
 
 /** caracteristicas do site no modo escuro */
-body.darck_theme{
+body.dark-theme {
+    /*! a palheta de cores é temporaria, mude depois para cores mais adequadas  */
     /** ============== paleta de cores ============== */
-    --bg-color-primary : #e2e2e2;
-    --bg-color-secundary : #E6D7C5;
-    --bg-color-terceary : #4e4e4e;
+    --bg-color-primary : #232323;
+    --bg-color-secondary : #323232;
+    --bg-color-tertiary : #a4a3a3;
 
-    --bg-button-primary : #00A793;
-    --bg-button-secundary : #424242;
+    --bg-button-primary : #078576;
+    --bg-button-secondary : #424242;
 
-    --text-color-primary : #222222;
-    --text-color-secundary: #898989;
+    --text-color-primary : #dadada;
+    --text-color-secondary: #646464;
 
+    /** ============== coloração da logo ==============*/
+    --logo-agenda: #4d6c8f ;  /* corpo da agenda */
+    --logo-lombada: #629ad5 ;  /* linha da lombada */
+    --logo-abas: #a6a698 ;  /* abas laterais */  
+    --logo-pessoa: #dad8d8 ;  /* ícone de pessoa */
+    --logo-nome: #4f78aa ;  /* "connecta" */  
+    --logo-linha: #bac0c7 ;  /* traço do slogan */
+    --logo-slogan: #adb1b7 ; /* "AGENDA DE CONTATOS" */ 
 
 /*     
     --color-primary: #00C9B0;
@@ -56,16 +80,9 @@ body.darck_theme{
 body{
 
     /*? estilização padrão do site  */
-    background-color: var(--bg-color-secundary);
+    background-color: var(--bg-color-secondary);
     color: var(--text-color-primary);
     font-family: var(--font-main);
-
-    /** ============== a/ancora ==============  */
-    a{
-        /*? remove toda a estilização padrão das "ancoras" */
-        color : var(--text-color-primary);
-        text-decoration: none;
-    }
 
     /** ============== header/cabeçalho ============== */
     header{
@@ -75,7 +92,7 @@ body{
         margin: 0 auto;
         padding: 0 24px;
         background-color: var(--bg-color-primary);
-        border-bottom: 1px solid var(--bg-color-terceary);
+        border-bottom: 1px solid var(--bg-color-tertiary);
         position: sticky; /* fica fixo no topo da pagina  */
         top: 0; /* garante que o header vai estar no topo */
         z-index: 100; /* camada do elemento  */
@@ -97,7 +114,7 @@ body{
 
                 .header-img-logo{
                     width:150px;
-                    object-fit: contain; /* mantem o tamanho da imagem */
+                    height: auto;
                     
                 }
 
@@ -108,74 +125,30 @@ body{
                 display: flex;
                 align-items: center;
                 gap: 32px;
+            
+            
+            }
 
-                .nav-link{
-                    font-weight: 500;
-                    color:var(--text-color-primary);
-                    transition: color 0.2s ease;
+            .nav-link{
+                font-weight: 500;
+                color:var(--text-color-primary);
+                transition: var(--transition-time) ease;
+
+                &:hover{
+                    opacity: var(--opacity-hover);
                 }
 
-                .nav-link:hover{
-                    color: var(--text-color-secundary)
-                }
-
-                .nav-link.active{
-                    color: var(--color-primary);
+                &.active{
                     font-weight: 600;
-                                
                 }
+                
+
             }
 
             .hero-section-header-actions{
                 display: flex;
                 align-items: center;
                 gap: 16px;
-                
-
-                .btn-login{
-                    background-color: var(--bg-button-terceary);
-                    border: 2px solid var(--text-color-secundary);
-                    padding: 10px 0px;
-                    border-radius: 10px;
-                    cursor: pointer;
-                    white-space: nowrap;
-
-                    a{
-                        color: var(--text-color-secundary);
-                        font-size: 14px;
-                        font-weight: 600;
-                        padding: 10px 22px;
-                    }
-                }
-
-                .btn-login:hover{
-                    transition: 105ms;
-                    background-color: none;
-                    /*! ajustar a interação */
-                }
-                
-                .btn-cadastro{
-                    background-color: var(--bg-button-primary);
-                    border: none;
-                    padding: 11.6px 0px;
-                    border-radius: 10px;
-                    cursor: pointer;
-                    white-space: nowrap;
-
-                    a{
-                        color: var(--text-color-terceary);
-                        font-size: 14px;
-                        font-weight: 600;
-                        padding: 11px 22px;
-                        
-                    }
-                } 
-
-                .btn-cadastro:hover{
-                    transition: 105ms;
-                    background-color: none;
-                    /*! ajustar a interação */
-                }
 
 
             }
@@ -186,8 +159,101 @@ body{
 
     }
 
+    /** ============== main/conteudo principal ============== */
+    main{
+        /*! em andamento  */
+        background-color: transparent;
+    }
+
+    /** ============== footer/rodapé ============== */
+    footer{
+        /*! em andamento  */
+        background-color: transparent;
+    }
+
+    /** ============== a/ancora ==============  */
+    a{
+        /*? remove toda a estilização padrão das "ancoras" */
+        color : var(--text-color-primary);
+        text-decoration: none;
+    }
+
+    /** ============== buttons ==============   */
+    .btn-primary{
+        background-color: var(--bg-button-primary);
+        font-size: 14px;
+        font-weight: 600;
+        border: none;
+        padding: 11.6px 0px; /*$ padding: 11px 22px;  */
+        border-radius: 10px;
+        cursor: pointer;
+        white-space: nowrap;
+        transition: var(--transition-time);
+
+        &:hover { opacity: var(--opacity-hover); }
+
+        a{
+            /*! deletar apos a edição do html para levar ao cadastro  */
+            color: var(--text-color-tertiary);
+            padding: 11px 22px;
+            
+        }
+    }
+
+    .btn-secondary{
+        background-color: var(--bg-button-tertiary);
+        font-weight: 600;
+        font-size: 14px;
+        border: 2px solid var(--text-color-secondary);
+        padding: 10px 0px; /*$ padding: 10px 22px;  */
+        border-radius: 10px;
+        cursor: pointer;
+        white-space: nowrap;
+        transition: var(--transition-time) ; 
+        
+
+        &:hover {opacity: var(--opacity-hover); }
+
+        a{
+            /*! deletar apos a edição do html para levar ao login  */
+            color: var(--text-color-secondary);
+            padding: 10px 20px;}
+    }
 
 }
+
+
+/*! formatação alternativa para a logo  */
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    
+    /* atribui a todas a imagens que estiverem dentro de um elemento com classe .logo */
+    .logo img{
+    width: 40px;
+    object-fit: contain; /* mantem o tamanho da imagem */
+    }
+
+    .logo-text{
+    display: flex;
+    flex-direction: column;
+    }
+
+    .logo-title{
+    font-size: 22px; /* tamanho da fonte*/
+    font-weight: 700;
+    color: var(--color-text);
+    }
+
+    .logo-subtitle{
+    font-size: 8px;
+    font-weight: 400;
+    color: var(--color-text-light);
+    }
+}
+
 
 
 /* 

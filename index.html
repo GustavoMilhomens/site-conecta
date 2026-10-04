@@ -11,9 +11,21 @@
         <header> <!-- cabeçalho -->
             <div class="hero-section-header"><!--* Logo e slogan do connecta -->
                 <a href="index.html" class="logo" > 
+
+                    <!--!  alternativa para a logo   -->
+
+                    <!-- <img src="assets/imgs/logo/logo_connecta.png" alt="imagem inesistente" class="header-img"> 
+                        <span class="logo-text"> 
+                        <span class="logo-title">connecta</span>
+                        <span class="logo-subtitle">- AGENDA DE CONTATOS</span>
+                    </span> -->
                     
-                    <img src="assets/imgs/logo/logo_slogan.svg" alt="imagem inascessível" class="header-img-logo"> 
+                    <!-- <img src="assets/imgs/logo/logo_slogan.svg" alt="imagem inascessível" class="header-img-logo">  -->
                 
+                    <svg class="header-img-logo" viewBox="0 0 972 256" aria-hidden="true">
+                        <use href="assets\imgs\logo\logo_slogan.svg"></use>
+                    </svg>
+                    
                 </a>
                 
                 <nav class="main-nav"> <!--* menu de navegação da pagina inicial -->
@@ -26,8 +38,9 @@
 
                 <div class="hero-section-header-actions">
                     <!--* botões de acesso, com login  -->
-                    <button class="btn-login"><a href="login.html">Entrar</a></button>
-                    <button class="btn-cadastro"><a href="cadastro.html">Criar Conta</a></button>
+                    <button class="btn-secondary"><a href="login.html">Entrar</a></button>
+                    <button class="btn-primary"><a href="cadastro.html">Criar Conta</a></button>
+                    <!--! quando for fazer a parte do login o <a> sera removido e recebera a função para mostrar a tela de login, ou cadastro, por cima da pagina inicial usando o fath no JS -->
                     
                 </div>
 
@@ -36,7 +49,8 @@
         </header>
 
         <main> <!-- conteudo principal -->
-
+            <button type="button" onclick="theme_button()" >Criar Conta</button>
+            <dialog></dialog> <!--? para fazer aparecer a aba de login ou cadastro, ele cria uma janela por cima de tudo poupando configurar varias coisas como a camada ou o fundo escurecido/turvo e depois é só usar junto com o fatch do JS  -->
         </main>
 
         <footer> <!-- rodapé -->
