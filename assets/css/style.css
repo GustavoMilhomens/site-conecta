@@ -28,7 +28,7 @@
 
     --opacity-hover : 0.7;
 
-    --transition-time : 0.2s;
+    --transition-time : 0.5s;
 
     
 }
@@ -36,6 +36,7 @@
 /** caracteristicas do site no modo escuro */
 body.dark-theme {
     /*! a palheta de cores é temporaria, mude depois para cores mais adequadas  */
+    transition: var(--transition-time);
     /** ============== paleta de cores ============== */
     --bg-color-primary : #232323;
     --bg-color-secondary : #323232;
