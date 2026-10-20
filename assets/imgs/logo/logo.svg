@@ -2,14 +2,14 @@
   <title>Connecta – Agenda de contatos</title>
   <style>
     /* Edite as cores aqui */
-    .cor-agenda   { fill: #4d6c8f; }  /* corpo da agenda */
-    .cor-lombada  { stroke: #4975a3ff; }  /* linha da lombada */
-    .cor-abas     { fill: #a6a698; }  /* abas laterais */
-    .cor-pessoa   { stroke: #dad8d8; }  /* ícone de pessoa */
-    .cor-nome     { fill: #3e628fff; }  /* "connecta" */
-    .cor-linha    { stroke: #bac0c7; }  /* traço do slogan */
-    .cor-slogan   { fill: #adb1b7; }  /* "AGENDA DE CONTATOS" */
+    .cor-agenda  { fill:   var(--logo-agenda,  #415f81ff); } /* corpo da agenda */
+    .cor-lombada { stroke: var(--logo-lombada, #436991ff); } /* linha da lombada */
+    .cor-abas    { fill:   var(--logo-abas,    #a6a698); } /* abas laterais */
+    .cor-pessoa  { stroke: var(--logo-pessoa,  #dad8d8); } /* ícone de pessoa */
+    .cor-nome    { stroke: var(--logo-linha,   #34557eff); } /* "connecta" */
  
+ 
+
   </style>
 
   <g id="icone" transform="translate(-30,-40)">
