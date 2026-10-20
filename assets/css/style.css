@@ -36,7 +36,9 @@
 /** caracteristicas do site no modo escuro */
 body.dark-theme {
     /*! a palheta de cores é temporaria, mude depois para cores mais adequadas  */
+    /*? Transição de cor do tema escuro */
     transition: var(--transition-time);
+
     /** ============== paleta de cores ============== */
     --bg-color-primary : #232323;
     --bg-color-secondary : #323232;
@@ -50,13 +52,13 @@ body.dark-theme {
 
     /** ============== coloração da logo ==============*/
     --logo-agenda: #4d6c8f ;  /* corpo da agenda */
-    --logo-lombada: #629ad5 ;  /* linha da lombada */
-    --logo-abas: #a6a698 ;  /* abas laterais */  
+    --logo-lombada: #629ad5 ; /* linha da lombada */
+    --logo-abas: #a6a698 ;    /* abas laterais */  
     --logo-pessoa: #dad8d8 ;  /* ícone de pessoa */
-    --logo-nome: #4f78aa ;  /* "connecta" */  
-    --logo-linha: #bac0c7 ;  /* traço do slogan */
-    --logo-slogan: #adb1b7 ; /* "AGENDA DE CONTATOS" */ 
-
+    --logo-nome: #4f78aa ;    /* "connecta" */  
+    --logo-linha: #bac0c7 ;   /* traço do slogan */
+    --logo-slogan: #adb1b7 ;  /* "AGENDA DE CONTATOS" */ 
+ 
 /*     
     --color-primary: #00C9B0;
     --color-text: #F5F5F5;
