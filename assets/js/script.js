@@ -13,6 +13,7 @@ async function add_element() {
 };
 
 //* ============== Mudar tema ==============
+const theme_button = document.getElementById("theme-button");
 const var_theme = localStorage.getItem("theme");
 
 //? verifica se o local storage atribui o tema como escuro ou claro e atribui se for escuro 
@@ -20,9 +21,8 @@ if (var_theme === "dark"){
     document.body.classList.add('dark-theme');
 }
 
-
-async function theme_button(){
-    
+theme_button.addEventListener("click", async function()
+{ 
     //? alterna entre ter ou não o tema escuro
     document.body.classList.toggle('dark-theme');
 
@@ -36,7 +36,17 @@ async function theme_button(){
 
     
 
-};
+} );
+
+
+    
+//* ============== menu_hamburguer ==============  
+
+const menu_button = document.getElementById("btn-hamburguer");
+const main_nav = document.querySelector(".main-nav");
+
+menu_button.addEventListener("click", function () { main_nav.classList.toggle("ativo"); });
+
 
 //* ============== ativar funções ==============
 add_element();
