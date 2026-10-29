@@ -9,6 +9,11 @@ async function add_element() {
     css.rel = 'stylesheet'; //? configura 
     css.href = 'assets/css/style.css'; //? referencia o css
     document.head.append(css); //? adiciona o elemento 
+
+    const icon = document.createElement('link');
+    icon.rel = 'icon';
+    icon.href = 'assets/imgs/logo/logo.svg';
+    document.head.append(icon);
     
 };
 
@@ -45,7 +50,10 @@ theme_button.addEventListener("click", async function()
 const menu_button = document.getElementById("btn-hamburguer");
 const main_nav = document.querySelector(".main-nav");
 
-menu_button.addEventListener("click", function () { main_nav.classList.toggle("ativo"); });
+// se tiver os elementos ele executa o comando  
+if (menu_button && main_nav){
+    menu_button.addEventListener("click", function () { main_nav.classList.toggle("ativo"); });
+}
 
 
 //* ============== ativar funções ==============
