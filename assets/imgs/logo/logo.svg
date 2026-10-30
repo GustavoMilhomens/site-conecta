@@ -6,10 +6,7 @@
     .cor-lombada { stroke: var(--logo-lombada, #436991ff); } /* linha da lombada */
     .cor-abas    { fill:   var(--logo-abas,    #a6a698); } /* abas laterais */
     .cor-pessoa  { stroke: var(--logo-pessoa,  #dad8d8); } /* ícone de pessoa */
-    .cor-nome    { stroke: var(--logo-linha,   #34557eff); } /* "connecta" */
- 
- 
-
+  
   </style>
 
   <g id="icone" transform="translate(-30,-40)">
