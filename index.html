@@ -6,10 +6,8 @@
         <title>Connecta: Organize seus contatos e compromissos</title>
         <script src="assets/js/script.js" defer></script> 
         <!--* O style e a linguagem "pt-br" são adicionados altomaticamente com o script acima -->
-
-        <link rel="icon" href="assets/imgs/logo/logo.svg">
-        <!--! colocar no js -->
-
+        
+         
     </head>
     <body>
         <header> <!-- cabeçalho -->
@@ -32,7 +30,7 @@
                     
                 </a>
                 
-                <nav class="main-nav"> <!--* menu de navegação da pagina inicial -->
+                <nav class="main-nav "> <!--* menu de navegação da pagina inicial -->
 
                     <a href="index.html" class="nav-link active">Início</a>
                     <a href="#" class="nav-link">Sobre</a>
@@ -41,19 +39,21 @@
                 </nav>
 
                 <div class="hero-section-header-actions">
-                    <!--* botões de acesso, com login  -->
+                    <!--* botões de acesso -->
                     <button class="btn-secondary"><a href="login.html">Entrar</a></button>
                     <button class="btn-primary"><a href="cadastro.html">Criar Conta</a></button>
                     <!--! quando for fazer a parte do login o <a> sera removido e recebera a função para mostrar a tela de login, ou cadastro, por cima da pagina inicial usando o fath no JS -->
+                    <button class="hamburguer" id="btn-hamburguer">☰</button>
                     
                 </div>
 
+                
             </div>
 
         </header>
 
         <main> <!-- conteudo principal -->
-            <button type="button" onclick="theme_button()" >Criar Conta</button>
+            <button id="theme-button" >Criar Conta</button>
             <dialog></dialog> <!--? para fazer aparecer a aba de login ou cadastro, ele cria uma janela por cima de tudo poupando configurar varias coisas como a camada ou o fundo escurecido/turvo e depois é só usar junto com o fatch do JS  -->
         </main>
 

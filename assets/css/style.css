@@ -26,9 +26,9 @@
     /** ============== fonte ==============*/
     --font-main : "Montserrat", sans-serif;
 
-    --opacity-hover : 0.7;
+    --opacity-hover : 0.65;
 
-    --transition-time : 0.5s;
+    --transition-time : 0.5s ease;
 
     
 }
@@ -81,98 +81,10 @@ body.dark-theme {
 
 /** ============== body/corpo do site ============== */
 body{
-
     /*? estilização padrão do site  */
     background-color: var(--bg-color-secondary);
     color: var(--text-color-primary);
     font-family: var(--font-main);
-
-    /** ============== header/cabeçalho ============== */
-    header{
-        /*? estilização padrão do cabeçalho */
-        width: 100%;
-        height: auto;
-        margin: 0 auto;
-        padding: 0 24px;
-        background-color: var(--bg-color-primary);
-        border-bottom: 1px solid var(--bg-color-tertiary);
-        position: sticky; /* fica fixo no topo da pagina  */
-        top: 0; /* garante que o header vai estar no topo */
-        z-index: 100; /* camada do elemento  */
-
-        /*? parte onde fica links e  */
-        .hero-section-header{
-            max-width: 1200px; /* maximo de largura */
-            margin: 0 auto; /* centraliza na pagina  */
-            padding: 16px 24px;
-            display: flex; /* oeganiza os elementos de lado a lado ao inves de um em cima e outro em baixo*/
-            align-items: center; /* centralista vertica~mente */
-            justify-content: space-between; /* distribui igualente os elementos colocando os links na ponta  */
-            gap: 24px; /* espaço entre os elementos  */
-
-            .logo{
-                display: flex;
-                align-items: center;
-                gap: 12px;
-
-                .header-img-logo{
-                    width:150px;
-                    height: auto;
-                    
-                }
-
-
-            }
-
-            .main-nav{
-                display: flex;
-                align-items: center;
-                gap: 32px;
-            
-            
-            }
-
-            .nav-link{
-                font-weight: 500;
-                color:var(--text-color-primary);
-                transition: var(--transition-time) ease;
-
-                &:hover{
-                    opacity: var(--opacity-hover);
-                }
-
-                &.active{
-                    font-weight: 600;
-                }
-                
-
-            }
-
-            .hero-section-header-actions{
-                display: flex;
-                align-items: center;
-                gap: 16px;
-
-
-            }
-
-
-        }
-
-
-    }
-
-    /** ============== main/conteudo principal ============== */
-    main{
-        /*! em andamento  */
-        background-color: transparent;
-    }
-
-    /** ============== footer/rodapé ============== */
-    footer{
-        /*! em andamento  */
-        background-color: transparent;
-    }
 
     /** ============== a/ancora ==============  */
     a{
@@ -193,7 +105,10 @@ body{
         white-space: nowrap;
         transition: var(--transition-time);
 
-        &:hover { opacity: var(--opacity-hover); }
+        &:hover { 
+            transform: scale(1.1);
+            opacity: var(--opacity-hover);
+        }
 
         a{
             /*! deletar apos a edição do html para levar ao cadastro  */
@@ -215,15 +130,143 @@ body{
         transition: var(--transition-time) ; 
         
 
-        &:hover {opacity: var(--opacity-hover); }
+        &:hover {
+            transform: scale(1.1);
+            opacity: var(--opacity-hover);
+        }
 
         a{
             /*! deletar apos a edição do html para levar ao login  */
             color: var(--text-color-secondary);
             padding: 10px 20px;}
     }
+}
+
+    
+/** ============== header/cabeçalho ============== */
+header{
+    /*? estilização padrão do cabeçalho */
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0 24px;
+    background-color: var(--bg-color-primary);
+    border-bottom: 1px solid var(--bg-color-tertiary);
+    position: sticky; /* fica fixo no topo da pagina  */
+    top: 0; /* garante que o header vai estar no topo */
+    z-index: 100; /* camada do elemento  */
+}
+
+/*? parte onde fica links e  */
+.hero-section-header{
+    max-width: 1200px; /* maximo de largura */
+    margin: 0 auto; /* centraliza na pagina  */
+    padding: 16px 24px;
+    display: flex; /* oeganiza os elementos de lado a lado ao inves de um em cima e outro em baixo*/
+    align-items: center; /* centralista vertica~mente */
+    justify-content: space-between; /* distribui igualente os elementos colocando os links na ponta  */
+    gap: 24px; /* espaço entre os elementos  */
+}
+
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .header-img-logo{
+        width:150px;
+        height: auto;
+        
+    }
+
 
 }
+
+.main-nav{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-link{
+    font-weight: 500;
+    color:var(--text-color-primary);
+    transition: var(--transition-time) ease;
+
+    &:hover{
+        opacity: var(--opacity-hover);
+    }
+
+    &.active{
+        font-weight: 600;
+    }
+    
+
+}
+
+.hero-section-header-actions{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+
+}
+
+
+/** ============== main/conteudo principal ============== */
+main{
+    /*! em andamento  */
+    background-color: transparent;
+}
+
+/** ============== footer/rodapé ============== */
+footer{
+    /*! em andamento  */
+    background-color: transparent;
+}
+
+
+/** ============== menu_hamburguer ==============  */
+.hamburguer{
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text);
+    
+}
+
+@media (max-width: 768px) {
+    .main-nav {
+        display: none;
+        flex-direction: column;
+        align-items: flex-end;
+        position: absolute;
+        top: 100%;
+        z-index: 1000;
+        left: 0;
+        right: 0;
+        background-color: var(--color-bg);
+        border-bottom: 1px solid var(--color-border);
+        padding: 16px 24px;
+        gap: 16px;
+    }
+
+    .ativo{
+        display: flex ;
+    }
+
+    .hamburguer{
+        display: flex;
+    }
+}
+
+@media (max-width: 500px) {
+    
+}
+
 
 
 /*! formatação alternativa para a logo  */
