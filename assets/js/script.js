@@ -47,13 +47,17 @@ theme_button.addEventListener("click", async function()
     
 //* ============== menu_hamburguer ==============  
 
-const menu_button = document.getElementById("btn-hamburguer");
+const btn_hamburg_open = document.getElementById("btn-hamburg-open");
+const btn_hamburg_close = document.getElementById("btn-hamburg-close");
 const main_nav = document.querySelector(".main-nav");
 
 // se tiver os elementos ele executa o comando  
-if (menu_button && main_nav){
-    menu_button.addEventListener("click", function () { main_nav.classList.toggle("ativo"); });
+if (btn_hamburg_open && btn_hamburg_close && main_nav){
+    btn_hamburg_open.addEventListener("click", function () { main_nav.classList.add("ativo"); });
+    
+    btn_hamburg_close.addEventListener("click", function () { main_nav.classList.remove("ativo"); });
 }
+
 
 
 //* ============== ativar funções ==============

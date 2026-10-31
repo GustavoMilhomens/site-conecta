@@ -4,7 +4,7 @@
     /** ============== paleta de cores ============== */
     --bg-color-primary : #e2e2e2;
     --bg-color-secondary : #E6D7C5;
-    --bg-color-tertiary : #4e4e4e;
+    --bg-color-tertiary : #afafaf;
 
     --bg-button-primary : #00A793;
     --bg-button-secondary : #424242;
@@ -28,7 +28,7 @@
 
     --opacity-hover : 0.65;
 
-    --transition-time : 0.5s ease;
+    --transition-time : 0.5s ease-in-out;
 
     
 }
@@ -184,6 +184,7 @@ header{
 }
 
 .main-nav{
+    background-color: transparent;
     display: flex;
     align-items: center;
     gap: 32px;
@@ -234,7 +235,7 @@ footer{
     background: none;
     border: none;
     cursor: pointer;
-    color: var(--color-text);
+    color: var(--text-color-primary);
     
 }
 
@@ -242,20 +243,33 @@ footer{
     .main-nav {
         display: none;
         flex-direction: column;
-        align-items: flex-end;
-        position: absolute;
-        top: 100%;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
         z-index: 1000;
-        left: 0;
+        width: min(200px, 80vw);
+        height: 100%;
         right: 0;
-        background-color: var(--color-bg);
         border-bottom: 1px solid var(--color-border);
+        background-color: var(--bg-color-tertiary);
         padding: 16px 24px;
         gap: 16px;
+
+        /* escondido fora da tela, à direita */
+        transform: translateX(100%);
+        visibility: hidden;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .main-nav .hamburguer {
+        /*? deixa o X a direita  */
+        align-self: flex-end;
     }
 
     .ativo{
         display: flex ;
+        transform: translateX(0);
+        visibility: visible;
     }
 
     .hamburguer{
