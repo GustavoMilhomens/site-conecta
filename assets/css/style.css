@@ -7,8 +7,8 @@
     --bg-color-tertiary : #d0d6d3;
 
     --bg-button-primary : #00A793;
-    --bg-button-secondary : #424242;
-    --bg-button-tertiary : #4545450f;
+    --bg-button-secondary : #9e9e9e14;
+    --bg-button-tertiary : #dc2a2a;
 
     --text-color-primary : #222222;
     --text-color-secondary: #777777;
@@ -39,9 +39,9 @@ body.dark-theme {
     /*? Transição de cor do tema escuro */
 
     /** ============== paleta de cores ============== */
-    --bg-color-primary : #232323;
-    --bg-color-secondary : #323232;
-    --bg-color-tertiary : #a4a3a3;
+    --bg-color-primary : #302d2d;
+    --bg-color-secondary : #39352e;
+    --bg-color-tertiary : #657373;
 
     --bg-button-primary : #078576;
     --bg-button-secondary : #424242;
@@ -52,11 +52,11 @@ body.dark-theme {
     --text-color-secondary: #aeadad;
 
     /** ============== coloração da logo ==============*/
-    --logo-agenda: #4d6c8f ;  /* corpo da agenda */
-    --logo-lombada: #629ad5 ; /* linha da lombada */
+    --logo-agenda: #496d97 ;  /* corpo da agenda */
+    --logo-lombada: #608fc2 ; /* linha da lombada */
     --logo-abas: #a6a698 ;    /* abas laterais */  
     --logo-pessoa: #dad8d8 ;  /* ícone de pessoa */
-    --logo-nome: #4f78aa ;    /* "connecta" */  
+    --logo-nome: #5c81ae ;    /* "connecta" */  
     --logo-linha: #bac0c7 ;   /* traço do slogan */
     --logo-slogan: #adb1b7 ;  /* "AGENDA DE CONTATOS" */ 
  
@@ -120,7 +120,7 @@ body{
     }
 
     .btn-secondary{
-        background-color: var(--bg-button-tertiary);
+        background-color: var(--bg-button-secondary);
         font-weight: 600;
         font-size: 14px;
         border: 2px solid var(--text-color-secondary);
@@ -152,7 +152,7 @@ header{
     margin: 0 auto;
     padding: 0 24px;
     background-color: var(--bg-color-primary);
-    border-bottom: 1px solid var(--bg-color-tertiary);
+    border-bottom: 1px solid var(--text-color-secondary);
     position: sticky; /* fica fixo no topo da pagina  */
     top: 0; /* garante que o header vai estar no topo */
     z-index: 100; /* camada do elemento  */
