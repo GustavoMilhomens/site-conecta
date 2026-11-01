@@ -4,11 +4,11 @@
     /** ============== paleta de cores ============== */
     --bg-color-primary : #e2e2e2;
     --bg-color-secondary : #E6D7C5;
-    --bg-color-tertiary : #afafaf;
+    --bg-color-tertiary : #d0d6d3;
 
     --bg-button-primary : #00A793;
     --bg-button-secondary : #424242;
-    --bg-button-tertiary : #e2e2e2;
+    --bg-button-tertiary : #4545450f;
 
     --text-color-primary : #222222;
     --text-color-secondary: #777777;
@@ -28,7 +28,7 @@
 
     --opacity-hover : 0.65;
 
-    --transition-time : 0.5s ease-in-out;
+    --transition : 0.5s ease;
 
     
 }
@@ -37,7 +37,6 @@
 body.dark-theme {
     /*! a palheta de cores é temporaria, mude depois para cores mais adequadas  */
     /*? Transição de cor do tema escuro */
-    transition: var(--transition-time);
 
     /** ============== paleta de cores ============== */
     --bg-color-primary : #232323;
@@ -46,9 +45,11 @@ body.dark-theme {
 
     --bg-button-primary : #078576;
     --bg-button-secondary : #424242;
+    --bg-button-tertiary : #ffffff1c;
 
-    --text-color-primary : #dadada;
-    --text-color-secondary: #646464;
+
+    --text-color-primary : #e6e6e6;
+    --text-color-secondary: #aeadad;
 
     /** ============== coloração da logo ==============*/
     --logo-agenda: #4d6c8f ;  /* corpo da agenda */
@@ -103,7 +104,7 @@ body{
         border-radius: 10px;
         cursor: pointer;
         white-space: nowrap;
-        transition: var(--transition-time);
+        transition: var(--transition);
 
         &:hover { 
             transform: scale(1.1);
@@ -127,7 +128,7 @@ body{
         border-radius: 10px;
         cursor: pointer;
         white-space: nowrap;
-        transition: var(--transition-time) ; 
+        transition: var(--transition) ; 
         
 
         &:hover {
@@ -184,7 +185,6 @@ header{
 }
 
 .main-nav{
-    background-color: transparent;
     display: flex;
     align-items: center;
     gap: 32px;
@@ -193,7 +193,7 @@ header{
 .nav-link{
     font-weight: 500;
     color:var(--text-color-primary);
-    transition: var(--transition-time) ease;
+    transition: opacity var(--transition) , color var(--transition);
 
     &:hover{
         opacity: var(--opacity-hover);
@@ -239,26 +239,30 @@ footer{
     
 }
 
+.menu-overlay {
+    display: none;
+}
+
 @media (max-width: 768px) {
     .main-nav {
-        display: none;
+        display: flex;
         flex-direction: column;
         align-items: flex-start;
         position: fixed;
         top: 0;
-        z-index: 1000;
-        width: min(200px, 80vw);
-        height: 100%;
         right: 0;
-        border-bottom: 1px solid var(--color-border);
-        background-color: var(--bg-color-tertiary);
+        height: 100%;
+        width: min(250px, 80vw);
+        z-index: 1000;
         padding: 16px 24px;
         gap: 16px;
+        border-bottom: 1px solid var(--color-border);
+        background-color: var(--bg-color-tertiary);
 
         /* escondido fora da tela, à direita */
         transform: translateX(100%);
         visibility: hidden;
-        transition: transform 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out, visibility 0.3s, background-color var(--transition), border-color var(--transition);
     }
 
     .main-nav .hamburguer {
@@ -266,7 +270,7 @@ footer{
         align-self: flex-end;
     }
 
-    .ativo{
+    .main-nav.ativo{
         display: flex ;
         transform: translateX(0);
         visibility: visible;
@@ -275,12 +279,34 @@ footer{
     .hamburguer{
         display: flex;
     }
+
+    .menu-overlay {
+        display: block;
+        position: fixed;
+        inset: 0;
+        z-index: 999;                  /* logo abaixo do menu (1000) */
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s;
+    }
+
+    .menu-overlay.ativo {
+        opacity: 1;
+        visibility: visible;
+    }
 }
 
 @media (max-width: 500px) {
     
 }
 
+
+body,
+header,
+.nav-link {
+    transition: background-color var(--transition), color var(--transition), border-color var(--transition);
+}
 
 
 /*! formatação alternativa para a logo  */
