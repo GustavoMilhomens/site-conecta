@@ -36,7 +36,6 @@
 /** caracteristicas do site no modo escuro */
 body.dark-theme {
     /*! a palheta de cores é temporaria, mude depois para cores mais adequadas  */
-    /*? Transição de cor do tema escuro */
 
     /** ============== paleta de cores ============== */
     --bg-color-primary : #302d2d;
@@ -301,7 +300,6 @@ footer{
     
 }
 
-
 body,
 header,
 .nav-link {
@@ -309,36 +307,8 @@ header,
 }
 
 
-/*! formatação alternativa para a logo  */
-.logo{
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    text-decoration: none;
-    
-    /* atribui a todas a imagens que estiverem dentro de um elemento com classe .logo */
-    .logo img{
-    width: 40px;
-    object-fit: contain; /* mantem o tamanho da imagem */
-    }
 
-    .logo-text{
-    display: flex;
-    flex-direction: column;
-    }
 
-    .logo-title{
-    font-size: 22px; /* tamanho da fonte*/
-    font-weight: 700;
-    color: var(--color-text);
-    }
-
-    .logo-subtitle{
-    font-size: 8px;
-    font-weight: 400;
-    color: var(--color-text-light);
-    }
-}
 
 
 
