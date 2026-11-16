@@ -182,26 +182,23 @@ header{
         height: auto;
         object-fit: contain; /* Mantém a proporção da imagem */
     }
-    .logo-text {
-        display: flex;
-        flex-direction: column; /* Título em cima, subtítulo embaixo*/
-    }
-    .logo-title {
-        font-size: 24px; 
-        font-weight: 500; /* negrito */
-        color: var(--color-text);
-    }
-
-    .logo-subtitle {
-        font-size: 10px;
-        font-weight: 400;
-        color: var(--color-text-light);
-    }
-
-
-
 }
 
+.logo-text {
+    display: flex;
+    flex-direction: column; /* Título em cima, subtítulo embaixo*/
+}
+.logo-title {
+    font-size: 24px; 
+    font-weight: 500; /* negrito */
+    color: var(--color-text);
+}
+
+.logo-subtitle {
+    font-size: 10px;
+    font-weight: 400;
+    color: var(--color-text-light);
+}
 
 .main-nav{
     display: flex;
