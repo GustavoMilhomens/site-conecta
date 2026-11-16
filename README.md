@@ -7,3 +7,5 @@ https://www.flaticon.com/free-icon/
 #converter imgs para outros formatos
 https://convertio.co/
 https://cloudconvert.com/
+
+connecta gitpages: https://gustavomilhomens.github.io/site-conecta/

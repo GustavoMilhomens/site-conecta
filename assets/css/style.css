@@ -17,7 +17,7 @@
     /** ============== coloração da logo ==============*/
     --logo-agenda: #263647 ;  /* corpo da agenda */
     --logo-lombada: #1b2a3a ;  /* linha da lombada */
-    --logo-abas: #d6d4cd ;  /* abas laterais */  
+    --logo-abas: #adadad ;  /* abas laterais */  
     --logo-pessoa: #d9d5cc ;  /* ícone de pessoa */
     --logo-nome: #1c2b3d ;  /* "connecta" */  
     --logo-linha: #767a7f ;  /* traço do slogan */
@@ -95,6 +95,7 @@ body{
 
     /** ============== buttons ==============   */
     .btn-primary{
+        display:block;
         background-color: var(--bg-button-primary);
         font-size: 14px;
         font-weight: 600;
@@ -119,6 +120,7 @@ body{
     }
 
     .btn-secondary{
+        display:block;
         background-color: var(--bg-button-secondary);
         font-weight: 600;
         font-size: 14px;
@@ -169,19 +171,37 @@ header{
 }
 
 
+/** ============== logo ============== */
 .logo{
     display: flex;
     align-items: center;
     gap: 12px;
 
     .header-img-logo{
-        width:150px;
+        width: 40px;
         height: auto;
-        
+        object-fit: contain; /* Mantém a proporção da imagem */
+    }
+    .logo-text {
+        display: flex;
+        flex-direction: column; /* Título em cima, subtítulo embaixo*/
+    }
+    .logo-title {
+        font-size: 24px; 
+        font-weight: 500; /* negrito */
+        color: var(--color-text);
+    }
+
+    .logo-subtitle {
+        font-size: 10px;
+        font-weight: 400;
+        color: var(--color-text-light);
     }
 
 
+
 }
+
 
 .main-nav{
     display: flex;
