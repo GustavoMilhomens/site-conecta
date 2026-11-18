@@ -23,6 +23,8 @@
     --logo-linha: #767a7f ;  /* traço do slogan */
     --logo-slogan: #767a7f ; /* "AGENDA DE CONTATOS" */ 
 
+    
+
     /** ============== fonte ==============*/
     --font-main : "Montserrat", sans-serif;
 
@@ -324,6 +326,76 @@ header,
 }
 
 
+.footer {
+    background-color: var(--color-footer);
+    color: #FFF;
+    padding-top: 48px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr; /* 1ª coluna 2x maior */
+    gap: 32px;
+    padding-bottom: 40px;
+}
+
+/* No fundo escuro, os textos do logo ficam claros */
+.footer .logo-title    { color: #FFF; }
+.footer .logo-subtitle { color: #CBD5E1; }
+
+.footer-column h4 {
+    font-size: 15px;
+    margin-bottom: 16px;
+}
+
+.footer-column li {
+    margin-bottom: 8px;
+}
+
+.footer-column a {
+    color: #CBD5E1;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-column a:hover {
+    color: #FFF;
+}
+
+.social-links {
+    display: flex;
+    gap: 12px;
+}
+
+/* Cada rede social dentro de um círculo */
+.social-links a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.08); /* branco bem transparente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+}
+
+.social-links a:hover {
+    background-color: var(--color-primary);
+}
+
+/* Ícones do Font Awesome também são FONTE: tamanho com font-size, cor com color */
+.social-links i {
+    font-size: 18px;
+    color: #FFF;
+}
+
+.footer-copy {
+    text-align: center;
+    font-size: 13px;
+    color: #CBD5E1;
+    padding: 20px 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
 
 
 

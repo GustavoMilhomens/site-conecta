@@ -37,8 +37,8 @@
                 <nav class="main-nav "> <!--* menu de navegação da pagina inicial -->
                     <button class="hamburguer" id="btn-hamburg-close" >✕</button>
                     <a href="index.html" class="nav-link active">Início</a>
-                    <a href="#" class="nav-link">Sobre</a>
-                    <a href="#" class="nav-link">Contato</a>
+                    <a href="#sobre" class="nav-link">Sobre</a>
+                    <a href="#contato" class="nav-link">Contato</a>
 
                 </nav>
 
@@ -57,6 +57,16 @@
         </header>
 
         <main> <!-- conteudo principal -->
+            <section >
+                <!-- section: agrupa um bloco de conteúdo sobre o mesmo assunto -->
+                 <div></div>
+
+            </section>
+
+            <section id="sobre">
+
+            </section>
+
             <button id="theme-button" >tema</button> <!--! menu temporario para testar a mudança de cor do site  -->
             <svg class="header-img-logo" viewBox="0 0 972 256" aria-hidden="true">
                         <use href="assets/imgs/logo/logo_slogan.svg"></use>
@@ -66,8 +76,71 @@
             </dialog> <!--? para fazer aparecer a aba de login ou cadastro, ele cria uma janela por cima de tudo poupando configurar varias coisas como a camada ou o fundo escurecido/turvo e depois é só usar junto com o fatch do JS  -->
         </main>
 
-        <footer> <!-- rodapé -->
-            
+        <footer id="contato"> <!-- rodapé -->
+            <!--! adapte para o projeto connecta, altere tambem o nome das classes  -->
+                <div class="container footer-container">
+
+                    <!-- Coluna 1: logo -->
+                    <div class="footer-brand">
+                        <a href="#" class="logo">
+                            <img src="./assets/imgs/logo/logo.svg" alt="Logo Escola Digital Livre">
+                            <span class="logo-text">
+                                <span class="logo-title">Escola Digital Livre</span>
+                                <span class="logo-subtitle">Tecnologia para todos</span>
+                            </span>
+                        </a>
+                    </div>
+
+                    <!-- Coluna 2: navegação -->
+                    <div class="footer-column">
+                        <h4>Navegação</h4>
+                        <ul>
+                            <li><a href="index.html">Início</a></li>
+                            <li><a href="./cursos.html">Cursos</a></li>
+                            <li><a href="#">Sobre</a></li>
+                            <li><a href="#">Contato</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Coluna 3: links úteis -->
+                    <div class="footer-column">
+                        <h4>Links úteis</h4>
+                        <ul>
+                            <li><a href="#por-que">Como funciona</a></li>
+                            <li><a href="#">Perguntas frequentes</a></li>
+                            <li><a href="#">Política de privacidade</a></li>
+                            <li><a href="#">Termos de uso</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Coluna 4: redes sociais
+                        Ícones do Font Awesome. Funciona igual ao Material Symbols,
+                        mas aqui o ícone é escolhido pela CLASSE:
+                        fa-brands  = coleção de marcas
+                        fa-github  = qual ícone mostrar -->
+                    <div class="footer-column">
+                        <h4>Redes sociais</h4>
+                        <div class="social-links">
+                            <!-- target="_blank" abre o link em uma NOVA aba
+                                aria-label descreve o link para leitores de tela -->
+                            <a href="https://github.com" target="_blank" aria-label="GitHub">
+                                <i class="fa-brands fa-github" aria-hidden="true"></i>
+                                <!-- <i> é a tag que o Font Awesome usa para ícones -->
+                            </a>
+                            <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+                                <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://discord.com" target="_blank" aria-label="Discord">
+                                <i class="fa-brands fa-discord" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            <p class="footer-copy">
+                &copy; <span id="ano"></span> Escola Digital Livre. Todos os direitos reservados.
+                <!-- &copy; vira o símbolo © | o ano é preenchido pelo JavaScript -->
+            </p>
         </footer>
     </body>
 </html>
