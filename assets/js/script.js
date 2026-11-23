@@ -83,6 +83,56 @@ if (btn_hamburg_open && btn_hamburg_close && main_nav && menu_overlay) {
     });
 }  
 
+const authDialog = document.getElementById("modal-auth");
+
+if (authDialog) {
+    document.addEventListener("click", async (event) => {
+        const link = event.target.closest("a[data-modal]");
+        if (!link) return;
+
+        event.preventDefault();
+
+        try {
+            const response = await fetch(link.href);
+            if (!response.ok) throw new Error("Não foi possível carregar a página.");
+
+            const html = await response.text();
+            const page = new DOMParser().parseFromString(html, "text/html");
+            const authCard = page.querySelector(".auth-card");
+
+            if (!authCard) throw new Error("Formulário não encontrado.");
+
+            authDialog.replaceChildren();
+
+            const card = authCard.cloneNode(true);
+
+            const closeButton = document.createElement("button");
+            closeButton.type = "button";
+            closeButton.className = "modal-close";
+            closeButton.setAttribute("aria-label", "Fechar");
+            closeButton.textContent = "×";
+            card.prepend(closeButton);
+
+            authDialog.append(card);
+            authDialog.showModal();
+        } catch (error) {
+            // Se não conseguir carregar o formulário, abre a página normalmente.
+            window.location.href = link.href;
+        }
+    });
+
+    authDialog.addEventListener("click", (event) => {
+        if (event.target.closest(".modal-close")) {
+            authDialog.close();
+        }
+
+        // Fecha ao clicar no fundo escurecido, fora do cartão.
+        if (event.target === authDialog) {
+            authDialog.close();
+        }
+    });
+}
+
 
 //* ============== ativar funções ==============
 add_element();

@@ -10,9 +10,69 @@
         <header> <!-- cabeçalho -->
 
         </header>
+ 
+        <main class="auth-page"> <!-- conteudo principal -->
+            <section class="auth-card" aria-labelledby="titulo-cadastro">
 
-        <main> <!-- conteudo principal -->
+                <a href="index.html" class="logo" aria-label="Connecta - voltar para o início">
+                    <svg class="header-img-logo" viewBox="0 0 256 256" aria-hidden="true">
+                        <use href="assets/imgs/logo/logo.svg"></use>
+                    </svg>
+                    <span class="logo-text">
+                        <span class="logo-title">connecta</span>
+                        <span class="logo-subtitle">AGENDA DE CONTATOS</span>
+                    </span>
+                </a>
 
+                <h1 id="titulo-cadastro" class="auth-title">Cadastre-se</h1>
+
+                <form id="form-cadastro" class="auth-form" method="post">
+
+                    <div class="form-field">
+                        <label for="cadastro-nome">Nome completo</label>
+                        <input type="text" id="cadastro-nome" name="nome"
+                               placeholder="Ex: João Silva" autocomplete="name" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="cadastro-email">E-mail</label>
+                        <input type="email" id="cadastro-email" name="email"
+                               placeholder="nome@empresa.com" autocomplete="email" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="cadastro-senha">Senha</label>
+                        <input type="password" id="cadastro-senha" name="senha"
+                               placeholder="••••••••" autocomplete="new-password" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="cadastro-confirmar">Confirmar senha</label>
+                        <input type="password" id="cadastro-confirmar" name="confirmar_senha"
+                               placeholder="••••••••" autocomplete="new-password" required>
+                    </div>
+
+                    <button type="submit" class="btn-primary btn-block">Criar conta</button>
+                </form>
+
+                <div class="divider"><span>ou</span></div>
+
+                <div class="social-login">
+                    <button type="button" class="social-btn" aria-label="Cadastrar com Google">
+                        <i class="fa-brands fa-google" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="social-btn" aria-label="Cadastrar com Facebook">
+                        <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="social-btn" aria-label="Cadastrar com Apple">
+                        <i class="fa-brands fa-apple" aria-hidden="true"></i>
+                    </button>
+                </div>
+
+                <p class="auth-switch">
+                    Tem uma conta? <a href="login.html" data-modal>Fazer login</a>
+                </p>
+            </section>
         </main>
 
         <footer> <!-- rodapé -->

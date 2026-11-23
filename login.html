@@ -13,13 +13,62 @@
             
         </header>
 
-        <main> <!-- conteudo principal -->
-            <button id="theme-button">hhh</button>
-            <form action="ligin">
-                <input type="email">
-                <input type="password">
-                <input type="submit">
-            </form>
+        <main class="auth-page"><!-- conteudo principal -->
+            <section class="auth-card" aria-labelledby="titulo-login">
+
+                <!-- Logo: clicar leva de volta para a página inicial -->
+                <a href="index.html" class="logo" aria-label="Connecta - voltar para o início">
+                    <svg class="header-img-logo" viewBox="0 0 256 256" aria-hidden="true">
+                        <use href="assets/imgs/logo/logo.svg"></use>
+                    </svg>
+                    <span class="logo-text">
+                        <span class="logo-title">connecta</span>
+                        <span class="logo-subtitle">AGENDA DE CONTATOS</span>
+                    </span>
+                </a>
+
+                <h1 id="titulo-login" class="auth-title">Login</h1>
+
+                <!-- method="post": mesmo se o JS falhar, a senha nunca vai parar na barra de endereço -->
+                <form id="form-login" class="auth-form" method="post">
+
+                    <div class="form-field">
+                        <label for="login-email">E-mail</label>
+                        <input type="email" id="login-email" name="email"
+                               placeholder="nome@empresa.com" autocomplete="email" required>
+                    </div>
+
+                    <div class="form-field">
+                        <div class="form-label-row">
+                            <label for="login-senha">Senha</label>
+                            <a href="#" class="link-small">Esqueci minha senha</a>
+                        </div>
+                        <input type="password" id="login-senha" name="senha"
+                               placeholder="••••••••" autocomplete="current-password" required>
+                    </div>
+
+                    <button type="submit" class="btn-primary btn-block">Entrar</button>
+                </form>
+
+                <div class="divider"><span>ou</span></div>
+
+                <!-- Login social (por enquanto só visual) -->
+                <div class="social-login">
+                    <button type="button" class="social-btn" aria-label="Entrar com Google">
+                        <i class="fa-brands fa-google" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="social-btn" aria-label="Entrar com Facebook">
+                        <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="social-btn" aria-label="Entrar com Apple">
+                        <i class="fa-brands fa-apple" aria-hidden="true"></i>
+                    </button>
+                </div>
+
+                <p class="auth-switch">
+                    Não tem uma conta? <a href="cadastro.html" data-modal>Criar Conta</a>
+                </p>
+            </section>
         </main>
 
         <footer> <!-- rodapé -->
